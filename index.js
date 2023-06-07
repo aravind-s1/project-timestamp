@@ -67,8 +67,7 @@ app.get("/api/:date", function(req, res) {
     date = new Date(parseInt(params_date))
   if(date.toString()=="Invalid Date")
     res.json({
-      "unix":null,
-      "utc":"Invalid Date"
+      "error":"Invalid Date"
     })
   let timestramp = date.getTime()
   let json_res = {
